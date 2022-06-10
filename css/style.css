@@ -1,0 +1,419 @@
+/* font-page */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* base-style */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+textarea
+{
+    width: 100%;
+}
+body
+{
+    background-color: #F8F9FB;
+}
+/* margin-bottom */
+.mab
+{
+    margin-bottom: 2rem;
+}
+/* margin-left */
+.mal
+{
+    margin-right: 1rem ;
+}
+/* margin-top */
+.mat
+{
+    margin-top: .5rem !important;
+}
+/* style of hide and show quations */
+.flex-box
+{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.show
+{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.show-block
+{
+    display: inline-block;
+    width: 80%;
+    margin-bottom: 8rem;
+}
+.hide
+{
+    display: none;
+}
+/* container */
+.container
+{
+    height: auto;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+}
+/* section-data */
+.section-data
+{
+    padding: 1.5rem;
+    width: 100%;
+}
+/* info------ */
+.section-data .info,
+.section-data .info .img-box 
+{
+    margin-bottom: 1.2rem;
+}
+.section-data .info .title-box .info-title
+{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+/* progress-------- */
+.progress
+{
+    margin-bottom: 1.1rem;
+    position: relative;
+}
+.pro
+{
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    padding:.2rem;
+    display: inline-block;
+    background-color: #BCBCBC;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.pro.active
+{
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    padding:.2rem;
+    display: inline-block;
+    background-color: #749DBE;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.progress-1
+{
+    margin-right: 10rem;
+}
+.progress-1::before
+{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 2.5%;
+    height: 2px;
+    width: 10.4rem;
+    background-color: #BCBCBC;
+}
+
+/* ------------------------------------form--------------------------------- */
+/* form-steps */
+.form-step 
+{
+    display: none;
+}
+.form-step-active
+{
+    display: block;
+}
+/* ===========step-1======= */
+.form-group
+{
+    display: inline-block;
+}
+.text
+{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.input
+{
+    border-radius: 4px;
+    width: 80%;
+    border: none;
+    margin-top: .5rem;
+    border-bottom: 2px solid #749DBE;
+    outline: none;
+}
+.btn
+{
+    text-align: center;
+    margin-left: 200px;
+    margin-top: 30px;
+    padding: 8px;
+    width: 130px;
+    color: white;
+    box-shadow: 5px 10px 10px #888888;
+    background-image: linear-gradient(#28314A,#749DBE);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.target-box
+{
+    margin-top: 1rem;
+    background-color: #BCBCBC;
+    color: #181717;
+    width: 7rem;
+    height: 2rem;
+    border-radius: 5rem;
+    text-align: center;
+    padding: .4rem;
+}
+.form .step-1 .step1-q-1,
+.form .step-1 .step1-q-2,
+.form .step-1 .step1-q-3
+{
+    margin-bottom: 1rem;
+}
+.step-1-q1
+{
+    width: 40em;
+
+}
+.step-1-q2
+{
+    border: 1px solid #BCBCBC;
+    border-bottom: 2px solid #749DBE;
+    outline: none;
+}
+.step-1-q3
+{
+    height: 4rem;
+    margin: 0;
+}
+
+.step1-q-3 i
+{
+    margin-left: 10px;
+}
+/* ========================== */
+
+
+/* =========step-2=========== */
+/* --browse-- */
+.custom-file
+{
+    border-bottom: 1.5px solid #749DBE;
+}
+.custom-file-label
+{
+    color: #BCBCBC;
+}
+.custom-file-input
+{
+    visibility: hidden;
+}
+/* -------- */
+.form-control
+{
+    width: 20rem;
+}
+.step2-q9
+{
+    margin-bottom: 4rem;
+}
+.step2-q4
+{
+    margin-bottom: 4rem;
+}
+.step2-q6 
+{
+    margin-bottom: 4rem;
+}
+.step2-q10
+{
+    width: 93.5%;
+} 
+/* --date-style-- */
+.date
+{
+    color: #BCBCBC;
+    border: none;
+    border-bottom: 1px #80A5B4 solid;
+}
+
+::-webkit-calendar-picker-indicator {
+    padding: 0.2em;
+    background-image: url(../image/calendar.png);
+    cursor: pointer;
+}
+
+/* ------------- */
+/* ======================================== */
+
+/* ------------------------------------------------------------------------------- */
+
+/* section-img */
+.section-imge
+{
+    width: 38%;
+    height: 100%;
+}
+/* ========================media=========================================== */
+
+@media (max-width: 1024px) and (min-width: 768px){
+    .progress-1::before {
+        left: 4%;
+    }
+    .step-1-q1 {
+        width: 20em;
+    }
+    .section-imge {
+        width: 50%;
+    }
+    .text {
+        font-size: .8rem;
+        font-weight: 900;
+    }
+    .show {
+        width: 95%;
+    }
+    .step2-q9
+    {
+        margin-bottom: 2rem;
+    }
+    .step2-q4
+    {
+        margin-bottom: 2rem;
+    }
+    .show-block
+    {
+        margin-bottom: 4rem;
+    }
+    .flex-box {
+        width: 95%;
+    }
+} 
+@media (max-width: 768px) and (min-width: 425px){
+    .section-imge {
+        display: none;
+    }
+    .flex-box {
+        width: 100%;
+    }
+    .input {
+        width: 100%;
+    }
+    .step-1-q1 {
+        width: 30em;
+    }
+    .btn {
+        margin-left: 288px;
+        margin-top: 39px;
+    }
+    .text {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    .progress-1::before {
+        left: 6%;
+    }
+    .form-control {
+        width: 20rem;
+    }
+    .show {
+        width: 100%;
+    }
+} 
+@media (max-width: 425px) and (min-width: 375px){
+    .progress-1::before {
+        left: 6%;
+    }
+    .step-1-q1 {
+        width: 10em;
+    }
+    .flex-box {
+        width: 100%;
+    }
+    .section-imge {
+        display: none;
+    }
+    .btn {
+        margin-left: 115px;
+        margin-top: 40px;
+    }
+    .text {
+        font-size: .8rem;
+        font-weight: 900;
+    }
+    .show
+    {
+        display: block;
+    }
+    .checkredio
+    {
+        margin-top: 1rem;
+    }
+    .flex-box {
+        width: 80%;
+        display: block;
+    }
+} 
+@media (max-width: 375px) and (min-width: 320px){
+
+    .input {
+        width: 100%;
+    }
+    .text {
+        font-size: .8rem;
+        font-weight: 900;
+    }
+    .step-1-q1 {
+        width: 10rem;
+    }
+    .btn {
+        margin-left: 90px;
+    }
+    .section-imge {
+        display: none;
+    }
+    .flex-box {
+        width: 100%;
+        display: block;
+    }
+} 
+@media (max-width: 375px) and (min-width : 200px){
+    .section-imge {
+        display: none;
+    }
+    .progress-1::before {
+        left: 10%;
+    }
+    .flex-box {
+        width: 100%;
+    }
+    .show
+    {
+        display: block;
+    }
+    .checkredio
+    {
+        margin-top: 1.4rem;
+    }
+    .flex-box {
+        width: 100%;
+        display: block;
+    }
+} 
+/* ======================================================================== */

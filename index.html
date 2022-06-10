@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Requirments</title>
+    <!-- file-css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- remix-icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+<!-- ==================start-main================-->
+<main class="form container" id="container">
+    <!-- =================start-section-data====================== -->
+    <section class="section-data section" id="section-data">
+        <div class="info" id="info">
+            <div class="img-box">
+                <!-- <img class="info-img" src="./image/codeexperts logo (final).png" width="60px" /> -->
+                <!-- <img class="info-img" src="./image/codeexperts logo (final)-01.svg" width="80px" /> -->
+                <img class="info-img" src="./image/codeexperts logo without background(final)-01.svg" width="80px" />
+            </div>
+            <div class="title-box">
+                <h5 class="info-title">Your Project Requirement</h5>
+            </div>
+        </div>
+        <!--- ------------------start-form-in-page----------------------------- -->
+        <div class="form">
+            <form  action="#">
+            <!-- ===========================================step---1========================================= -->
+            <section class="step-1 form-step form-step-active" id="step-1">
+                <div class="progress" id="progress">
+                        <div class="progress-1 pro active" id="pro-1">1</div>
+                        <div class="progress-2 pro" id="pro-1-2">2</div>
+                    </div>
+                    <div class="step1-q-1 flex-box">
+                        <label for="q-1" class="text">Choose Your Product</label>
+                        <div class="form-group" id="choose">
+                            <select class="step-1-q1 input" id="q-1" name="select" style="background-color: #F8F9FB ;">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>  
+                    <div class="step1-q-2">
+                        <label for="q-2" class="text">Solution Description</label><br>
+                        <textarea id="q-2" cols="300" rows="3" class="input step-1-q2" name="textarea" style="background-color: #F8F9FB ;" ></textarea>
+                    </div>  
+                    <div class="step1-q-3">
+                        <label for="q-3" class="text">Target Audience</label>
+                        <div class="target-box">ABC <i class="ri-close-line"></i></div>
+                        <input type="search" class="step-1-q3 input" name="search" id="q-3" style="background-color: #F8F9FB ;"> 
+                    </div>  
+                    <!-- <div class="btn"  >Next</div> -->
+                    <input type="button" class="btn mat"  value="Next"/>
+                </section>
+                <!-- ======================================step---- 2========================================= -->
+                <section class="step-2 form-step" id="step-2">
+                    <div class="progress" id="progress">
+                        <div class="progress-1 pro active" id="pro-1 stepP-1" onclick="returnTo1()">1</div>
+                        <div class="progress-2 pro active" id="pro-2 stepP-2">2</div>
+                    </div>
+                    <!-- ============================q1-main===================================== -->
+                    <div class="step2-q1 flex-box mab show" id="step2-q1">
+
+                        <label class="text">Do you have a coding language preference?</label>
+                        <div class="checkredio">
+                            <input onclick="check_answer_yes()" class="form-check-input-1 radio-inline" type="radio" name="gridRadiosq1" id="gridRadios1-1"
+                            value="yes"  />
+                            <label for="gridRadios1-1">Yes</label>
+                        <input onclick="check_answer_no()" class="form-check-input-1 radio-inline" type="radio" name="gridRadiosq1" id="gridRadios2-1"
+                            value="no"  />
+                            <label for="gridRadios2-1">No</label>
+                        </div>
+                    </div>
+                    <!-- ================================if-press-yes-show-=============----------- -->
+                    <div class="step2-q2 mab hide" id="step2-q2">
+
+                        <label class="text">If Yes, What would it be ?</label>
+                        <div class="text-input">
+                        <input type="text" class="form-control input"  id="formGroupExampleInput" style="background-color: #F8F9FB ;" >
+                        </div>
+
+                    </div>
+                    <!-- ================================if-press-yes-show=============----------- -->
+                    <div class="step2-q3 flex-box mab" id="step2-q3">
+                        <label class="text">Do you have a map of your software build-up?</label>
+                        <div class="checkredio">
+                            <input onclick="check_answer_yes_2()" class="form-check-input-2 radio-inline" type="radio" name="gridRadiosq2" id="gridRadios1-2"
+                            value="yes" />
+                            <label for="gridRadios1-2">Yes</label>
+                        <!-- ----------------------------------------------------- -->
+                        <input onclick="check_answer_no_2()" class="form-check-input-2 radio-inline" type="radio" name="gridRadiosq2" id="gridRadios2-2"
+                            value="no"/>
+                            <label for="gridRadios2-2">No</label>
+                        </div>
+                    </div>
+                    <!-- ---------------------------if-you-press-no------------------------------- -->
+
+                    <div class="step2-q4 checkredio mab hide" id="step2-q4">
+
+                    <label class="text">If Yes(Please upload it)</label>
+                        <div class="text-input">
+                            <div class="custom-file">
+                                <label class="custom-file-label border-0" for="inputGroupFile04">Browse...</label>
+                                <input type="file" class="custom-file-input" id="inputGroupFile04"> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step2-q9 flex-box mab hide" id="step2-q9">
+
+                        <label class="text">If no: would you like to have it created by Code Experts?</label>
+                        <div class="checkredio">
+                            <input  class="form-check-input-5 radio-inline" type="radio" name="gridRadiosq5" id="gridRadios1-5"
+                            value="yes" onclick="check_answer_yes_q9()"/>
+                            <label for="gridRadios1-5">Yes</label>
+                        <!-- ------------------------------------------------------------ -->
+                        <input  class="form-check-input-5 radio-inline" type="radio" name="gridRadiosq5" id="gridRadios2-5"
+                            value="no"  onclick="check_answer_no_q9()"/>
+                            <label for="gridRadios2-5">No</label>
+                    </div>
+                </div>
+
+                <div class="step2-q6 flex-box mab hide" id="step2-q6">
+
+                    <label class="text" for="exampleFormControlSelect1"
+                    >If no:Please select the date for sharing your final map
+                    </label>
+                    <input type="date" class="date" style="background-color: #F8F9FB ;" />
+
+                </div>
+                    <div class="step2-q7 flex-box mab" id="step2-q7">
+
+                        <label class="text">Do you have your software design element?</label>
+                        <div class="checkredio">
+                            <input onclick="check_answer_yes_4()" class="form-check-input-4 radio-inline" type="radio" name="gridRadiosq4" id="gridRadios1-4"
+                            value="yes"  />
+                            <label for="gridRadios1-4">Yes</label>
+                        <!-- ------------------------------------------------------ -->
+                        <input onclick="check_answer_no_4()" class="form-check-input-4 radio-inline" type="radio" name="gridRadiosq4" id="gridRadios2-4"
+                            value="no"  />
+                            <label for="gridRadios2-4">No</label>
+                            
+                        </div>
+                    </div>
+                    <!--================= if-you-press-yes ============================-->
+                    <div class="step2-q5 flex-box mab hide" id="step2-q5">
+
+                        <label class="text">If no: would you like to have it created by code experts?</label>
+                        <div class="checkredio">
+                            <input class="form-check-input-3 radio-inline" type="radio" name="gridRadiosq3" id="gridRadios1-3"
+                            value="yes"  onclick="check_answer_yes_if_2()"/>
+                            <label for="gridRadios1-3">Yes</label>
+                        <!-- ----------------------------------------------------------- -->
+                        <input  class="form-check-input-3 radio-inline" type="radio" name="gridRadiosq3" id="gridRadios2-3"
+                            value="no"  onclick="check_answer_no_if_2()"/>
+                            <label for="gridRadios2-3">No</label>
+                        </div>
+
+                    </div>
+                    <!--================= if-you-press-no ============================-->
+
+                    <!--================= q4-no show ifno:would you... ============================-->
+                    <!-- ================================q3-show if would yes=============----------- -->
+
+                    <!-- ================================q2-yes----=============----------- -->
+
+
+
+                    <!-- ================================q3-yes----=============----------- -->
+
+                    <div class=" step2-q8 flex-box mab hide" id="step2-q8">
+
+                        <label class="text">If Yes(Please upload it)</label>
+                        <div class="text-input">
+                            <div class="custom-file">
+                                <label class="custom-file-label border-0" for="inputGroupFile04">Browse...</label>
+                                <input type="file" class="custom-file-input" id="inputGroupFile04"> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ================================if-yessssssss----=============----------- -->
+
+                    <!-- ================================if-nooooooooooooo----=============----------- -->
+                    <div class="step2-q5-n-1 flex-box mab hide" id="step2-q5-n-1">
+
+                        <label class="text">If no: would you like to have it created by Code Experts?</label>
+                        <div class="checkredio">
+                            <input  class="form-check-input-3 radio/-inline" type="radio" name="gridRadiosq3-n-1" id="gridRadios1-3-n-1"
+                            value="yes" onclick="check_answer_yes_if_2()" />
+                            <label for="gridRadios1-3-n-1">Yes</label>
+                        <!-- ----------------------------------------------------------- -->
+                        <input  class="form-check-input-3 radio-inline" type="radio" name="gridRadiosq3-n-1" id="gridRadios2-3-n-1"
+                            value="no" onclick="check_answer_yes_if_2()" />
+                            <label for="gridRadios2-3-n-1">No</label>
+                        </div>
+
+                    </div>
+                    <!-- ================================--- if q4 and q3 -no-=============----------- -->
+                    <div class=" step2-q10 flex-box mab hide" id="step2-q10">
+
+                        <label class="text" for="exampleFormControlSelect1"
+                        >If no:Please select the date for sharing your final design elements
+                        </label>
+                        <input type="date" class="date" style="background-color: #F8F9FB ;" /><br>
+
+                    </div>
+
+                    <input type="submit" class="btn mat" />
+                </section>
+            </form>
+            </div>
+
+    </section>
+    <!-- =================end-section-data======================== -->
+
+    <!-- =================start-section-imge====================== -->
+    <section class="section-imge section" id="section-data">
+        <img src="./image/rocket image-01.svg" alt="" srcset="">
+    </section>
+    <!-- =================end-section-imge======================== -->
+</main>
+<!-- ==================end-main==========================================-->
+<script src="./js/main.js"></script>
+</body>
+</html>
